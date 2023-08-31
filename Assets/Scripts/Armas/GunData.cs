@@ -16,12 +16,14 @@ public class GunData : ScriptableObject
     public float fireRate;
     public float reloadTime;
     public Vector2 dispersion;
-    //public float recoil;
-    //public float dispersion;
+
+
+    [Header("Animations")]
+    public AnimationClip ReloadAnim;
+    public AnimationClip ShootAnim;
     
     [HideInInspector] 
     public bool reloading;
-
 
     public float GetDispersion()
     {

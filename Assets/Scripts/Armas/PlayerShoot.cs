@@ -8,7 +8,7 @@ public class PlayerShoot : MonoBehaviour
     public static Action shootInput;   
     public static Action reloadInput;
 
-
+    //TODO: Rewrite to the new input system
     private void Update()
     {
         if (Input.GetMouseButton(0))

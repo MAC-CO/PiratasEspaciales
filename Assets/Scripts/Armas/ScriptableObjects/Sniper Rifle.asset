@@ -19,6 +19,5 @@ MonoBehaviour:
   magSize: 0
   fireRate: 0
   reloadTime: 0
-  recoil: 0
-  dispersion: 0
+  dispersion: {x: 0.1, y: 0.5}
   reloading: 0
