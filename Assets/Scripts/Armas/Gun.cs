@@ -9,10 +9,14 @@ public class Gun : MonoBehaviour
 
     private float timeSinceLastShot;
 
+    private Vector3 positionImpacto;
+
     private void Start()
     {
         PlayerShoot.shootInput += Shoot;
         PlayerShoot.reloadInput += StartReloading;
+
+        _gunData.currentAmmo = _gunData.magSize;
     }
 
     public void StartReloading()
@@ -36,33 +40,44 @@ public class Gun : MonoBehaviour
     
     private void Shoot()
     {
-        if (_gunData.currentAmmo > 0)
+        if (_gunData.currentAmmo > 0 && CanShoot())
         {
-            if (CanShoot())
+            float angle = Random.Range(0, 2 * Mathf.PI);
+            float radius = Random.Range(0, _gunData.GetDispersion());
+
+            float a = radius * Mathf.Sin(angle);
+            float b = radius * Mathf.Cos(angle);
+
+            Vector3 offset = new Vector3(a,b,0);
+
+            if (Physics.Raycast(_muzzle.position + offset, _muzzle.forward, out RaycastHit hitInfo, _gunData.maxDistance))
             {
-                if (Physics.Raycast(_muzzle.position, _muzzle.forward, out RaycastHit hitInfo, _gunData.maxDistance))
-                {
-                    Debug.Log(hitInfo.transform.name);
-                    IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();
-                    damagable?.Damage(_gunData.damage);
-                }
-
-                _gunData.currentAmmo--;
-                timeSinceLastShot = 0;
-                OnGunShot();
-
+                //Debug.Log(hitInfo.transform.name);
+                positionImpacto = hitInfo.point;
+                IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();
+                damagable?.Damage(_gunData.damage);
             }
+
+            _gunData.currentAmmo--;
+            timeSinceLastShot = 0;
+            OnGunShot();
         }
     }
 
     private void Update()
     {
         timeSinceLastShot += Time.deltaTime;
-        Debug.DrawRay(_muzzle.position, _muzzle.forward);
+        Debug.DrawRay(_muzzle.position, _muzzle.forward * _gunData.maxDistance);
     }
 
     private void OnGunShot()
     {
         
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(positionImpacto, 0.150f);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour, IDamagable
 {
+    [SerializeField]
     private int health = 100;
     
     public void Damage(int damage)

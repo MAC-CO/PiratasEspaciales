@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Gun", menuName = "Weapon/Gun")]
@@ -17,7 +15,16 @@ public class GunData : ScriptableObject
     public int magSize;
     public float fireRate;
     public float reloadTime;
+    public Vector2 dispersion;
+    //public float recoil;
+    //public float dispersion;
     
     [HideInInspector] 
     public bool reloading;
+
+
+    public float GetDispersion()
+    {
+        return dispersion.x;
+    }
 }
