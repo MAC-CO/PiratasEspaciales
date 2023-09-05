@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Sniper Rifle
   m_EditorClassIdentifier: 
   name: Sniper Rifle
-  damage: 0
-  maxDistance: 0
-  currentAmmo: 0
-  magSize: 0
-  fireRate: 0
-  reloadTime: 0
-  dispersion: {x: 0.1, y: 0.5}
+  damage: 100
+  maxDistance: 150
+  currentAmmo: 5
+  magSize: 5
+  fireRate: 120
+  reloadTime: 2.5
+  dispersion: {x: 0.1, y: 0.3}
+  ReloadAnim: {fileID: 0}
+  ShootAnim: {fileID: 0}
   reloading: 0

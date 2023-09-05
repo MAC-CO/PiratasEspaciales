@@ -16,6 +16,8 @@ public class Gun : MonoBehaviour
         PlayerShoot.shootInput += Shoot;
         PlayerShoot.reloadInput += StartReloading;
 
+        _gunData.ResetStats();
+
         _gunData.currentAmmo = _gunData.magSize;
     }
 
@@ -42,11 +44,15 @@ public class Gun : MonoBehaviour
     {
         if (_gunData.currentAmmo > 0 && CanShoot())
         {
+            _gunData.RecalcularDisparo();
+
             float angle = Random.Range(0, 2 * Mathf.PI);
             float radius = Random.Range(0, _gunData.GetDispersion());
 
             float a = radius * Mathf.Sin(angle);
             float b = radius * Mathf.Cos(angle);
+
+            Debug.Log(a + " a" + " ------- " + b + " b");
 
             Vector3 offset = new Vector3(a,b,0);
 
@@ -69,6 +75,7 @@ public class Gun : MonoBehaviour
     private void Update()
     {
         timeSinceLastShot += Time.deltaTime;
+        _gunData.ReclacularDispersion();
         Debug.DrawRay(_muzzle.position, _muzzle.forward * _gunData.maxDistance);
     }
 
