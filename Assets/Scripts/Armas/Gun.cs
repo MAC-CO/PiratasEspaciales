@@ -56,6 +56,8 @@ public class Gun : MonoBehaviour
 
             Vector3 offset = new Vector3(a,b,0);
 
+            offset = _muzzle.rotation * offset;
+
             if (Physics.Raycast(_muzzle.position + offset, _muzzle.forward, out RaycastHit hitInfo, _gunData.maxDistance))
             {
                 Debug.Log(hitInfo.transform.name);
