@@ -159,6 +159,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            Agachaoh();
         }
 
         private void LateUpdate()
@@ -273,7 +274,7 @@ namespace StarterAssets
 
             // update animator if using character
             if (_hasAnimator)
-            {
+            {   
                 _animator.SetFloat(_animIDSpeed, _animationBlend*inputDirection.z);
                 _animator.SetFloat("direction", inputDirection.x);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
@@ -318,6 +319,7 @@ namespace StarterAssets
                 {
                     _jumpTimeoutDelta -= Time.deltaTime;
                 }
+                
             }
             else
             {
@@ -389,5 +391,22 @@ namespace StarterAssets
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
         }
+
+        public void Agachaoh()
+        {
+            if(_input.jump)
+            {
+                if (_hasAnimator)
+                    {
+                        _animator.SetBool("Seagacho", true);
+                    }
+                    else
+                    {
+                        _animator.SetBool("Seagacho", false);
+                    }
+            }
+            
+        }
+
     }
 }
