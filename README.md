@@ -1,2 +1,0 @@
-# PiratasEspaciales
-Udem - Pascual
