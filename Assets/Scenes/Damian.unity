@@ -1126,6 +1126,7 @@ MonoBehaviour:
   move: {x: 0, y: 0}
   look: {x: 0, y: 0}
   jump: 0
+  crouch: 0
   sprint: 0
   analogMovement: 0
   cursorLocked: 1
@@ -2347,6 +2348,7 @@ GameObject:
   - component: {fileID: 3893294199639930361}
   - component: {fileID: 6982812147933622147}
   - component: {fileID: 1762682266}
+  - component: {fileID: 6982812147933622148}
   - component: {fileID: 4416926083347132233}
   - component: {fileID: 4416926083347132232}
   - component: {fileID: 5885216829670671795}
@@ -3243,6 +3245,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6982812147933622148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926083347132227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20612d031a918b74c80b57e28732a818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlador: {fileID: 4416926083347132232}
+  agacharse:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Agacharse
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: fc0087c0-acfc-4581-927b-ddc81594db34
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 2918576626916960136, guid: 4419d82f33d36e848b3ed5af4c8da37e,
+      type: 3}
+  estaAgachado: 0
 --- !u!4 &6983258930626336602
 Transform:
   m_ObjectHideFlags: 0
