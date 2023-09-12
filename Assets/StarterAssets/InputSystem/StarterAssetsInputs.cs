@@ -11,6 +11,7 @@ namespace StarterAssets
 		public Vector2 move;
 		public Vector2 look;
 		public bool jump;
+		public bool crouch;
 		public bool sprint;
 
 		[Header("Movement Settings")]
@@ -50,6 +51,11 @@ namespace StarterAssets
 		{
 			move = newMoveDirection;
 		} 
+
+		public void CrouchInput()
+		{
+			
+		}
 
 		public void LookInput(Vector2 newLookDirection)
 		{

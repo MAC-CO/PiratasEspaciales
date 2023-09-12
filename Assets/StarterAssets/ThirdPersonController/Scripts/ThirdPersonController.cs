@@ -394,7 +394,7 @@ namespace StarterAssets
 
         public void Agachaoh()
         {
-            if(_input.jump)
+            if(_input.crouch)
             {
                 if (_hasAnimator)
                     {
