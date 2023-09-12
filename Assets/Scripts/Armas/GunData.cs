@@ -31,8 +31,8 @@ public class GunData : ScriptableObject
     public AnimationClip ReloadAnim;
     public AnimationClip ShootAnim;
     
-    [HideInInspector] 
-    public bool reloading;
+    //[HideInInspector] 
+    public bool reloading = false;
 
     public float GetDispersion() //2
     {

@@ -13,7 +13,9 @@ public class PlayerShoot : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
+
             shootInput?.Invoke();
+            print("Disparo");
         }
 
         if (Input.GetKeyDown(KeyCode.R))

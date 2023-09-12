@@ -42,6 +42,10 @@ public class Gun : MonoBehaviour
     
     private void Shoot()
     {
+        print("primera ->> " + !_gunData.reloading);
+        print("segunda ->> " + (timeSinceLastShot > 1f / (_gunData.fireRate / 60f)).ToString());
+        print(_gunData.currentAmmo);
+        print(CanShoot());
         if (_gunData.currentAmmo > 0 && CanShoot())
         {
             _gunData.RecalcularDisparo();
