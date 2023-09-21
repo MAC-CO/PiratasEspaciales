@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
@@ -11,6 +12,7 @@ namespace StarterAssets
 		public Vector2 move;
 		public Vector2 look;
 		public bool jump;
+		public bool crouch;
 		public bool sprint;
 
 		[Header("Movement Settings")]
@@ -37,6 +39,11 @@ namespace StarterAssets
 		public void OnJump(InputValue value)
 		{
 			JumpInput(value.isPressed);
+		}
+
+		public void OnCrouch(InputValue value)
+		{
+			CrouchInput(value.isPressed);
 		}
 
 		public void OnSprint(InputValue value)
@@ -69,6 +76,11 @@ namespace StarterAssets
 		private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
+		}
+
+		public void CrouchInput(bool newCrouchState)
+		{
+			crouch = newCrouchState;
 		}
 
 		private void SetCursorState(bool newState)

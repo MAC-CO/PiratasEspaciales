@@ -1,4 +1,4 @@
-﻿ using UnityEngine;
+﻿using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
@@ -159,7 +159,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
-            Agachaoh();
+           //Agachaoh();
         }
 
         private void LateUpdate()
@@ -276,7 +276,7 @@ namespace StarterAssets
             if (_hasAnimator)
             {   
                 _animator.SetFloat(_animIDSpeed, _animationBlend*inputDirection.z);
-                _animator.SetFloat("direction", inputDirection.x);
+                _animator.SetFloat("direction", inputDirection.x * _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
         }
@@ -391,21 +391,27 @@ namespace StarterAssets
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
         }
-
+    
         public void Agachaoh()
+        { 
+            _animator.SetBool("Seagacho", true);
+            Debug.Log("Agachado");
+        }
+
+        public void Depie()
         {
-            if(_input.jump)
+            _animator.SetBool("Seagacho", false);
+            Debug.Log("depie");
+        }
+
+        public void Agachado(bool a)
+        {
+            if(a)
             {
-                if (_hasAnimator)
-                    {
-                        _animator.SetBool("Seagacho", true);
-                    }
-                    else
-                    {
-                        _animator.SetBool("Seagacho", false);
-                    }
+                Agachaoh();
+            }else{
+                Depie();
             }
-            
         }
 
     }
