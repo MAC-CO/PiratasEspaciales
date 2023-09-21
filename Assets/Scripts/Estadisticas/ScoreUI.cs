@@ -12,8 +12,7 @@ public class ScoreUI : MonoBehaviour
     [SerializeField]
     private ScoreManager scoreManager;
 
-
-
+    
     void Start()
     {
         Debug.Log("Start() se está ejecutando");
