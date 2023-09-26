@@ -3952,6 +3952,34 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 2918576626916960136, guid: 4419d82f33d36e848b3ed5af4c8da37e,
       type: 3}
+  Apuntar:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Apuntar
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 83aded8a-8783-41b0-aa66-badd1f28f929
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -7171162001255292412, guid: 4419d82f33d36e848b3ed5af4c8da37e,
+      type: 3}
+  Disparar:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Disparar
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 015ebc8f-66ac-4f32-bdaa-cc73b8bf2dda
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 8687425317084798180, guid: 4419d82f33d36e848b3ed5af4c8da37e,
+      type: 3}
+  Disparo: 0
+  Apuntado: 0
   estaAgachado: 0
 --- !u!114 &6982812147933622149
 MonoBehaviour:
