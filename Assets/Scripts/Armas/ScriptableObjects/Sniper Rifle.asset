@@ -17,9 +17,13 @@ MonoBehaviour:
   maxDistance: 150
   currentAmmo: 5
   magSize: 5
-  fireRate: 120
+  fireRate: 200
   reloadTime: 2.5
   dispersion: {x: 0.1, y: 0.3}
+  speedDispersion: 0.1
+  actualDispersion: 0
+  increaseDispersion: 0.1
+  viewActualDispersion: 0
   ReloadAnim: {fileID: 0}
   ShootAnim: {fileID: 0}
   reloading: 0

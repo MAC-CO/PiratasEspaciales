@@ -44,7 +44,7 @@ public class GunData : ScriptableObject
         actualDispersion = Mathf.Clamp(actualDispersion + increaseDispersion, dispersion.x, dispersion.y);
     }
 
-    public void ReclacularDispersion()
+    public void RecalcularDispersion()
     {
         actualDispersion = Mathf.Clamp(actualDispersion - increaseDispersion * Time.deltaTime, dispersion.x, dispersion.y);
 

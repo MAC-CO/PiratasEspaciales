@@ -7,6 +7,8 @@ public class Gun : MonoBehaviour
     [SerializeField] GunData _gunData;
     [SerializeField] Transform _muzzle;
 
+    public ParticleSystem flash;
+
     private float timeSinceLastShot;
 
     private Vector3 positionImpacto;
@@ -42,10 +44,11 @@ public class Gun : MonoBehaviour
     
     private void Shoot()
     {
-        print("primera ->> " + !_gunData.reloading);
-        print("segunda ->> " + (timeSinceLastShot > 1f / (_gunData.fireRate / 60f)).ToString());
-        print(_gunData.currentAmmo);
-        print(CanShoot());
+        //print("primera ->> " + !_gunData.reloading);
+        //print("segunda ->> " + (timeSinceLastShot > 1f / (_gunData.fireRate / 60f)).ToString());
+        //print(_gunData.currentAmmo);
+        //print(CanShoot());
+
         if (_gunData.currentAmmo > 0 && CanShoot())
         {
             _gunData.RecalcularDisparo();
@@ -56,7 +59,7 @@ public class Gun : MonoBehaviour
             float a = radius * Mathf.Sin(angle);
             float b = radius * Mathf.Cos(angle);
 
-            Debug.Log(a + " a" + " ------- " + b + " b");
+            //Debug.Log(a + " a" + " ------- " + b + " b");
 
             Vector3 offset = new Vector3(a,b,0);
 
@@ -64,7 +67,9 @@ public class Gun : MonoBehaviour
 
             if (Physics.Raycast(_muzzle.position + offset, _muzzle.forward, out RaycastHit hitInfo, _gunData.maxDistance))
             {
-                Debug.Log(hitInfo.transform.name);
+                //Debug.Log(hitInfo.transform.name);
+
+                flash.Play();
                 
                 positionImpacto = hitInfo.point;
                 IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();
@@ -81,7 +86,7 @@ public class Gun : MonoBehaviour
     private void Update()
     {
         timeSinceLastShot += Time.deltaTime;
-        _gunData.ReclacularDispersion();
+        _gunData.RecalcularDispersion();
         Debug.DrawRay(_muzzle.position, _muzzle.forward * _gunData.maxDistance);
     }
 
