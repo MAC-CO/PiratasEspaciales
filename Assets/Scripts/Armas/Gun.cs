@@ -64,12 +64,13 @@ public class Gun : MonoBehaviour
             Vector3 offset = new Vector3(a,b,0);
 
             offset = _muzzle.rotation * offset;
+            
+            flash.Play();
 
             if (Physics.Raycast(_muzzle.position + offset, _muzzle.forward, out RaycastHit hitInfo, _gunData.maxDistance))
             {
                 //Debug.Log(hitInfo.transform.name);
 
-                flash.Play();
                 
                 positionImpacto = hitInfo.point;
                 IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();
