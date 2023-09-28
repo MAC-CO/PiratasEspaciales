@@ -20,7 +20,7 @@ public class Dmov2 : MonoBehaviour
 
     public float estaAgachado;
 
-    public Gun guninstanciado;
+    //public Gun guninstanciado;
 
     void Start()
     {

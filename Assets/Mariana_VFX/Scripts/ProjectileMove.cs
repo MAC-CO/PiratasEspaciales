@@ -7,17 +7,20 @@ public class ProjectileMove : MonoBehaviour {
 	private float speed = 1f;
 	[SerializeField] GunData _gunData; //maxdistance - firerate
 
-	//void Update(){
+    void Update()
+    {
 
-	//	if (speed != 0){
-	//		transform.position += transform.forward * (speed * Time.deltaTime);
-	//	}
-	//	else{
-	//		Debug.Log("No Speed");
-	//	}
-	//}
+        if (speed != 0)
+        {
+            transform.position += transform.forward * (speed * Time.deltaTime);
+        }
+        else
+        {
+            Debug.Log("No Speed");
+        }
+    }
 
-	public void Spawn(){
+    public void Spawn(){
 
 	}
 
