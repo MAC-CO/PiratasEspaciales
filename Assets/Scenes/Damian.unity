@@ -1786,7 +1786,7 @@ PrefabInstance:
     - target: {fileID: 2276640878285949560, guid: 79d163e831ef58d4e8261d9cf0b1d611,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2276640878285949560, guid: 79d163e831ef58d4e8261d9cf0b1d611,
         type: 3}
@@ -1796,7 +1796,7 @@ PrefabInstance:
     - target: {fileID: 2276640878285949560, guid: 79d163e831ef58d4e8261d9cf0b1d611,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2276640878285949560, guid: 79d163e831ef58d4e8261d9cf0b1d611,
         type: 3}
@@ -1837,6 +1837,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MuzzlePosition_Flash
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530142669350536641, guid: 79d163e831ef58d4e8261d9cf0b1d611,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
