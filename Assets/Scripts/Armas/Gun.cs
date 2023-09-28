@@ -7,14 +7,16 @@ public class Gun : MonoBehaviour
     [SerializeField] GunData _gunData;
     [SerializeField] Transform _muzzle;
 
+    public ParticleSystem flash;
+
     private float timeSinceLastShot;
 
     private Vector3 positionImpacto;
 
     private void Start()
     {
-        PlayerShoot.shootInput += Shoot;
-        PlayerShoot.reloadInput += StartReloading;
+        Dmov2.shootInput += Shoot;
+        Dmov2.reloadInput += StartReloading;
 
         _gunData.ResetStats();
 
@@ -65,6 +67,8 @@ public class Gun : MonoBehaviour
             if (Physics.Raycast(_muzzle.position + offset, _muzzle.forward, out RaycastHit hitInfo, _gunData.maxDistance))
             {
                 Debug.Log(hitInfo.transform.name);
+                
+                flash.Play();
                 
                 positionImpacto = hitInfo.point;
                 IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();

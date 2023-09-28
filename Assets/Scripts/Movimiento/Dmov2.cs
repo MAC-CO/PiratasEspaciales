@@ -10,10 +10,17 @@ public class Dmov2 : MonoBehaviour
     public InputActionProperty agacharse;
     public InputActionProperty Apuntar;
     public InputActionProperty Disparar;
+    public InputActionProperty Reload;
     public float Disparo;
     public float Apuntado;
+    public float Recarga;
+
+    public static Action shootInput;
+    public static Action reloadInput;
 
     public float estaAgachado;
+
+    public Gun guninstanciado;
 
     void Start()
     {
@@ -25,6 +32,7 @@ public class Dmov2 : MonoBehaviour
     {
         MecanicasDeDisparo();
         MecanicasDeApuntado();
+        MecanicaDeRecarga();
         
         estaAgachado = agacharse.action.ReadValue<float>();
 
@@ -37,6 +45,7 @@ public class Dmov2 : MonoBehaviour
         Disparo = Disparar.action.ReadValue<float>();
         if(Disparo >= 1)
         {
+        shootInput?.Invoke();
         Debug.Log("el sujeto ha disparado");    
         }
         
@@ -45,6 +54,7 @@ public class Dmov2 : MonoBehaviour
     public void MecanicasDeApuntado()
     {
         Apuntado = Apuntar.action.ReadValue<float>();
+        
 
         if(Apuntado >= 1)
         {
@@ -52,8 +62,17 @@ public class Dmov2 : MonoBehaviour
         }else{
         Debug.Log("No esta apuntando");   
         }
-        
-        
+    }
+
+    public void MecanicaDeRecarga()
+    {
+        Recarga = Reload.action.ReadValue<float>();
+
+        if (Recarga >= 1)
+        {
+            reloadInput?.Invoke();
+        }
+
     }
 
     
