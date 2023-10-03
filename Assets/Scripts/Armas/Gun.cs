@@ -100,5 +100,6 @@ public class Gun : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(positionImpacto, 0.150f);
+        Debug.Log("GeneroBola");
     }
 }
