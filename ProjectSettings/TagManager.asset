@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Objeto1
+  - BuffVel
   layers:
   - Default
   - TransparentFX
