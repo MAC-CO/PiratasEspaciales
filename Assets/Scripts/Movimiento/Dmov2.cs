@@ -45,8 +45,8 @@ public class Dmov2 : MonoBehaviour
         Disparo = Disparar.action.ReadValue<float>();
         if(Disparo >= 1)
         {
-        shootInput?.Invoke();
-        Debug.Log("el sujeto ha disparado");    
+            shootInput?.Invoke();
+            Debug.Log("el sujeto ha disparado");    
         }
         
     }
