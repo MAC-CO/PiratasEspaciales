@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class AumentarVelocidadYReaparecer : MonoBehaviour
 {
     public float aumentoDeVelocidad = 2.0f; // El aumento de velocidad que deseas aplicar.
@@ -39,21 +41,27 @@ public class AumentarVelocidadYReaparecer : MonoBehaviour
         // Verifica si el objeto colisionado tiene el tag "Player" y está activo.
         if (other.CompareTag("Player") && objetoActivo)
         {
-            // Aumenta la velocidad del personaje multiplicando su velocidad actual por el aumento deseado.
+            // Accede al componente CharacterController o Rigidbody del personaje.
+            CharacterController characterController = other.GetComponent<CharacterController>();
             Rigidbody playerRigidbody = other.GetComponent<Rigidbody>();
 
-            if (playerRigidbody != null)
+            if (characterController != null)
             {
-                // Aumenta la velocidad del personaje multiplicando su velocidad actual por el aumento deseado.
-                playerRigidbody.velocity *= aumentoDeVelocidad;
-
-                // Destruye el objeto "BuffVel".
-                Destroy(gameObject);
-
-                // Establece el objeto como inactivo y comienza el tiempo de reaparición.
-                objetoActivo = false;
-                tiempoDeReaparicionActual = 0.0f;
+                // Aumenta la velocidad del movimiento del personaje.
+                characterController.Move(characterController.velocity * aumentoDeVelocidad * Time.deltaTime);
             }
+            else if (playerRigidbody != null)
+            {
+                // Aumenta la velocidad del movimiento del personaje.
+                playerRigidbody.velocity *= aumentoDeVelocidad;
+            }
+
+            // Destruye el objeto "BuffVel".
+            Destroy(gameObject);
+
+            // Establece el objeto como inactivo y comienza el tiempo de reaparición.
+            objetoActivo = false;
+            tiempoDeReaparicionActual = 0.0f;
         }
     }
 }
