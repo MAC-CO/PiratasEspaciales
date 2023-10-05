@@ -977,7 +977,7 @@ GameObject:
   - component: {fileID: 1379231771}
   m_Layer: 0
   m_Name: BuffSalto
-  m_TagString: Untagged
+  m_TagString: BuffSalto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1568,7 +1568,7 @@ GameObject:
   - component: {fileID: 2113597802}
   m_Layer: 0
   m_Name: Bola
-  m_TagString: Untagged
+  m_TagString: Bala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

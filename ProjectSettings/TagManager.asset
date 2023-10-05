@@ -7,6 +7,10 @@ TagManager:
   - CinemachineTarget
   - Moneda
   - Bullet
+  - Objeto1
+  - BuffVel
+  - BuffSalto
+  - Bala
   layers:
   - Default
   - TransparentFX
