@@ -3699,6 +3699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec7db602577f1a49b0b7dd16467f3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 6982812147933622147}
 --- !u!4 &6983258930626336602
 Transform:
   m_ObjectHideFlags: 0
@@ -5035,8 +5036,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.07
+  m_Height: 0.14
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!144 &8626512282725974307
@@ -5444,8 +5445,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.08
+  m_Height: 0.19
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!144 &9186500494669230323
