@@ -7,6 +7,7 @@ public class RagDoll : MonoBehaviour
     [SerializeField] private Animator animator;
 
     private Rigidbody[] rigidbodies;
+    public Collider[] colliders;
 
     void Start()
     {
@@ -20,6 +21,12 @@ public class RagDoll : MonoBehaviour
         foreach (Rigidbody rigidbody in rigidbodies)
         {
             rigidbody.isKinematic = isKinematic;
+
+        }
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            colliders[i].enabled = enabled;
         }
 
         animator.enabled = !enabled;
