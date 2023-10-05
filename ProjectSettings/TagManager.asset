@@ -5,9 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
-  - Objeto1
-  - BuffVel
-  - BuffJump
+  - Moneda
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -15,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - personaje
   - 
   - 
   - 
