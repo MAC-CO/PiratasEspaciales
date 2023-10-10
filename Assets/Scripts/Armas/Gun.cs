@@ -7,14 +7,16 @@ public class Gun : MonoBehaviour
     [SerializeField] GunData _gunData;
     [SerializeField] Transform _muzzle;
 
+    public ParticleSystem flash;
+
     private float timeSinceLastShot;
 
     private Vector3 positionImpacto;
 
     private void Start()
     {
-        PlayerShoot.shootInput += Shoot;
-        PlayerShoot.reloadInput += StartReloading;
+        Dmov2.shootInput += Shoot;
+        Dmov2.reloadInput += StartReloading;
 
         _gunData.ResetStats();
 
@@ -42,10 +44,11 @@ public class Gun : MonoBehaviour
     
     private void Shoot()
     {
-        print("primera ->> " + !_gunData.reloading);
-        print("segunda ->> " + (timeSinceLastShot > 1f / (_gunData.fireRate / 60f)).ToString());
-        print(_gunData.currentAmmo);
-        print(CanShoot());
+        // print("primera ->> " + !_gunData.reloading);
+        // print("segunda ->> " + (timeSinceLastShot > 1f / (_gunData.fireRate / 60f)).ToString());
+        // print(_gunData.currentAmmo);
+        // print(CanShoot());
+
         if (_gunData.currentAmmo > 0 && CanShoot())
         {
             _gunData.RecalcularDisparo();
@@ -56,20 +59,19 @@ public class Gun : MonoBehaviour
             float a = radius * Mathf.Sin(angle);
             float b = radius * Mathf.Cos(angle);
 
-            Debug.Log(a + " a" + " ------- " + b + " b");
+            //Debug.Log(a + " a" + " ------- " + b + " b");
 
             Vector3 offset = new Vector3(a,b,0);
 
             offset = _muzzle.rotation * offset;
 
+            flash.Play();
+
             if (Physics.Raycast(_muzzle.position + offset, _muzzle.forward, out RaycastHit hitInfo, _gunData.maxDistance))
             {
-                Debug.Log(hitInfo.transform.name);
-                
                 positionImpacto = hitInfo.point;
                 IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();
                 damagable?.Damage(_gunData.damage);
-                
             }
 
             _gunData.currentAmmo--;
