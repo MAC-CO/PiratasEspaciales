@@ -17,7 +17,7 @@ public class DatosJugador : MonoBehaviour
 
         if (vidaPlayer <=0 )
         {
-            Debug.Log("jaja, te mataron");
+            Debug.Log("Death!");
         }
     }
 }
