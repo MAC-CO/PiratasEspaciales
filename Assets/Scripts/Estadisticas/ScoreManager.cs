@@ -6,19 +6,17 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private ScoreData sd;
+    public ScoreData sd;
     void Awake ()
     {
-        var json = PlayerPrefs.GetString("scores", "{}");
-        sd = JsonUtility.FromJson<ScoreData>(json);
+        //var json = PlayerPrefs.GetString("scores", "{}");
+        //sd = JsonUtility.FromJson<ScoreData>(json);
     }
 
     void Start()
     {
-        {
-            Score score = new Score("Jugador1", 100, 10);
-            AddScore(score);
-        }
+        Score score = new Score("Jugador1", 100, 10);
+        AddScore(score);
     }
 
     public IEnumerable<Score> GetHighScores()

@@ -3,23 +3,35 @@ using UnityEngine.UI;
 
 public class ContadorSingleton : MonoBehaviour
 {
-
+    public GameObject ObjetoMoneda;
     public static ContadorSingleton instancia;
     public int contador = 0;
 
-    void Awake()
+    //void Awake()
+    //{
+    //    if (instancia == null)
+    //    {
+    //        instancia = this;
+    //        DontDestroyOnLoad(ObjetoMoneda);
+    //    }
+    //    else
+    //    {
+    //        Destroy(ObjetoMoneda);
+    //    }
+    //}
+
+    public void Update()
     {
         if (instancia == null)
         {
             instancia = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(ObjetoMoneda);
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(ObjetoMoneda);
         }
     }
-
     public Text contadorTexto;
 
     public void ActualizarContador()
