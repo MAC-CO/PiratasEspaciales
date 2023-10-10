@@ -72,6 +72,11 @@ public class Gun : MonoBehaviour
                 positionImpacto = hitInfo.point;
                 IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();
                 damagable?.Damage(_gunData.damage);
+                CallPartes cp = hitInfo.collider.gameObject.GetComponent<CallPartes>();
+                if (cp != null) 
+                {
+                    cp.datos.CausarDaño(_gunData.damage*cp.factor);
+                }
             }
 
             _gunData.currentAmmo--;

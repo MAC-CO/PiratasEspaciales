@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class DatosJugador : MonoBehaviour
 {
-    public int vidaPlayer;
+    public float vidaPlayer;
     public Slider VidaVisual;
-
-    private void Update()
+    private void Start()
     {
-
-        VidaVisual.GetComponent <Slider>().value = vidaPlayer;
+    }
+    public void CausarDaño(float d)
+    {
+        vidaPlayer -= d;
+        VidaVisual.value = vidaPlayer;
 
         if (vidaPlayer <=0 )
         {
