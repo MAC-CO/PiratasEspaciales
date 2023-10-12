@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Juanda 1.unity
+    guid: 2c2b07d9bf93af9459d816f92560aa61
+  - enabled: 1
+    path: Assets/Scenes/Damian.unity
+    guid: 225b7fd03dd53f44f971dedbadb313ad
   m_configObjects: {}
