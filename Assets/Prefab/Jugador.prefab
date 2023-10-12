@@ -2274,6 +2274,8 @@ GameObject:
   - component: {fileID: 5104112294231686218}
   - component: {fileID: 4902948935098462826}
   - component: {fileID: 3552486002882911549}
+  - component: {fileID: 4386036964807048887}
+  - component: {fileID: 4202682556525432775}
   m_Layer: 8
   m_Name: Jugador
   m_TagString: Player
@@ -2655,6 +2657,44 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4386036964807048887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623280275369185928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec7db602577f1a49b0b7dd16467f3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1273412793454079391}
+  colliders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &4202682556525432775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623280275369185928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6007ebfa232737438cf9168c236a5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaPlayer: 100
+  VidaVisual: {fileID: 0}
+  maxHealth: 100
+  respawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  player: {fileID: 6623280275369185928}
 --- !u!1 &6733396070915428842
 GameObject:
   m_ObjectHideFlags: 0
