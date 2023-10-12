@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b8e87b0a6d7ab3a4b8c07e32bec70509
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Volumen: {instanceID: 0}
+  - FXVolumen: {instanceID: 0}
+  - mute: {instanceID: 0}
+  - mixer: {fileID: 24100000, guid: d547bb2089cea2f4f9bd11633d9d19ac, type: 2}
+  - fxsourse: {instanceID: 0}
+  - clicksound: {instanceID: 0}
+  - PanelSonidoObject: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
