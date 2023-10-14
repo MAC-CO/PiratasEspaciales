@@ -3614,11 +3614,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movimiento: {fileID: 8638359612768860845}
+  managerVida: {fileID: 0}
   aumentoDeVelocidad: 2
   velocidadOriginalCaminar: 0
   velocidadOriginalCorrer: 0
   saltoAumento: 5
   saltoAlturaInicial: 0
+  AumentoVida: 20
+  VidaActual: 0
 --- !u!114 &6034213168141209291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3684,9 +3687,23 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 5421895666766052432, guid: 4419d82f33d36e848b3ed5af4c8da37e,
       type: 3}
+  MenuSelecChar:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   Disparo: 0
   Apuntado: 0
   Recarga: 0
+  MenuC: 0
+  Menu1: {fileID: 0}
   estaAgachado: 0
 --- !u!143 &5131878396850495775
 CharacterController:
@@ -3955,7 +3972,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.8
   m_Center: {x: 0, y: 1.14, z: 0}
@@ -3976,7 +3993,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 1.11, z: 0}

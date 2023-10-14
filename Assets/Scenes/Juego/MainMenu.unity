@@ -528,6 +528,7 @@ GameObject:
   - component: {fileID: 521205625}
   - component: {fileID: 521205624}
   - component: {fileID: 521205623}
+  - component: {fileID: 521205626}
   m_Layer: 0
   m_Name: RoomManager
   m_TagString: Untagged
@@ -584,6 +585,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &521205626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521205622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b86ab058d76a2b448f1c5a598b762f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &557799918
 GameObject:
   m_ObjectHideFlags: 0
@@ -8321,5 +8334,5 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 2141363542}
   - {fileID: 1470862812}
-  - {fileID: 521205625}
   - {fileID: 557799922}
+  - {fileID: 521205625}
