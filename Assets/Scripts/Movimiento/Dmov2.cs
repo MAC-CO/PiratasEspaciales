@@ -11,9 +11,13 @@ public class Dmov2 : MonoBehaviour
     public InputActionProperty Apuntar;
     public InputActionProperty Disparar;
     public InputActionProperty Reload;
+    public InputActionProperty MenuSelecChar;
     public float Disparo;
     public float Apuntado;
     public float Recarga;
+    public float MenuC;
+    
+    public GameObject Menu1;
 
     public static Action shootInput;
     public static Action reloadInput;
@@ -33,10 +37,14 @@ public class Dmov2 : MonoBehaviour
         MecanicasDeDisparo();
         MecanicasDeApuntado();
         MecanicaDeRecarga();
+        BotonMenuChar();
         
         estaAgachado = agacharse.action.ReadValue<float>();
 
         controlador.Agachado(estaAgachado>0.5f);
+
+        
+
     }
 
     public void MecanicasDeDisparo()
@@ -73,6 +81,21 @@ public class Dmov2 : MonoBehaviour
             reloadInput?.Invoke();
         }
 
+    }
+
+    public void BotonMenuChar()
+    {
+        MenuC = MenuSelecChar.action.ReadValue<float>();
+
+        if (MenuC >= 1)
+        {
+            Menu1.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Menu1.SetActive(false);
+        }
     }
 
     

@@ -6,33 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/Juanda 1.unity
-    guid: 2c2b07d9bf93af9459d816f92560aa61
-  - enabled: 1
-    path: Assets/Scenes/Damian.unity
-    guid: 225b7fd03dd53f44f971dedbadb313ad
-  - enabled: 1
     path: Assets/Scenes/Juego/MainMenu.unity
-    guid: 37c3bf25c3636af45af13262594f7a50
-  - enabled: 1
-    path: Assets/Scenes/Juego/Creditos.unity
-    guid: 8add96c929f2c25438ae2f5046ba4dd8
+    guid: c4632c2fdb46ef84ab0230445cb57507
   - enabled: 1
     path: Assets/Scenes/Juego/Juego.unity
-    guid: e9fccb9ef46cf96418d89131ed8862af
-  - enabled: 1
-    path: Assets/Scenes/Juego/Lobby.unity
-    guid: b401a1f14851da640b0debd49de8a7f7
-  - enabled: 1
-    path: Assets/Scenes/Juego/Opciones.unity
-    guid: a01ba5efba5959148984fbc7d3ef453f
-  - enabled: 1
-    path: Assets/Scenes/Juego/SelecChar.unity
-    guid: 7f477ea0701362f4ea0d6ee38dc9fc58
-  - enabled: 1
-    path: Assets/Scenes/Juego/volver.unity
-    guid: 2561963570bfab348b44f74489a4eb0d
+    guid: ea3588f7ec5a3b247ba62e53b0424ed4
   m_configObjects: {}
