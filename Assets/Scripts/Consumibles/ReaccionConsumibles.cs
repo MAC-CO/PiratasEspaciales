@@ -51,23 +51,13 @@ public class ReaccionConsumibles : MonoBehaviour
         }
         
       if (other.CompareTag("Regenerar"))
-{
-    VidaActual += AumentoVida; // Aumenta la vida actual.
-    managerVida.vidaPlayer = (int)VidaActual; // Actualiza la vida del jugador en el script DatosJugador.
-    Debug.Log("Recuperaste 20 de vida pedazo de gobernado");
-    // Actualiza el valor del slider de vida.
-    managerVida.VidaVisual.value = VidaActual;
-}
-
-    
-         //if (other.CompareTag("BuffDaño")) 
-         {
-
-            // movimiento.damage = dañoAumento;
-             //Destroy(other.gameObject);
-             //Invoke("RestaurarDaño", 20);
-         }
-
+        {
+            VidaActual += AumentoVida; // Aumenta la vida actual.
+            managerVida.vidaPlayer = (int)VidaActual; // Actualiza la vida del jugador en el script DatosJugador.
+            Debug.Log("Recuperaste 20 de vida pedazo de gobernado");
+            // Actualiza el valor del slider de vida.
+            managerVida.VidaVisual.value = VidaActual;
+        }
     }
 
     public void RestaurarVelocidad()

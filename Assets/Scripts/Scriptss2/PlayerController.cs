@@ -1,40 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviourPunCallbacks
 {
-    [SerializeField] GameObject cameraHolder;
-
-    [SerializeField] float mouseSensitivity, sprintSpeed, walkSpeed, JumpForce,SmoothTime;
-
-    float verticalLookRotation;
-    bool grounded;
-    Vector3 smoothMoveVelocity;
-    Vector3 moveAmount;
-
-    Rigidbody rb;
+    PhotonView PV;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        PV = GetComponent<PhotonView>();
+    }
+
+    void Start()
+    {
+        if(!PV.IsMine)
+        {
+            Destroy(GetComponentInChildren<Camera>().gameObject);
+        }
     }
 
     void Update()
     {
-        Look();
-        
+        if(!PV.IsMine)
+            return;
     }
 
-    void Look()
-	{
-		float MouseX = Input.GetAxis("Mouse X");
-        float MouseY = Input.GetAxis("Mouse Y");
-        transform.Rotate(Vector3.up * MouseX * mouseSensitivity);
-
-        verticalLookRotation += MouseY * mouseSensitivity;
-        verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90f, 90f);
-
-        cameraHolder.transform.localEulerAngles = Vector3.left * verticalLookRotation;
-	}
+    void FixedUpdate()
+    {
+        if(!PV.IsMine)
+            return;
+    }
 }
