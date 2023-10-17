@@ -11,9 +11,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Juego");
     }
 
-    public void CargarNivel(string nombreNivel)
+    public void CargarNivel()
     {
-        SceneManager.LoadScene(nombreNivel);
+        SceneManager.LoadScene("Juego");
     }
 
     public void Salir()

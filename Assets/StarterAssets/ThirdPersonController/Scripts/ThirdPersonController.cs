@@ -281,7 +281,7 @@ namespace StarterAssets
             }
         }
 
-        private void JumpAndGravity()
+        public void JumpAndGravity()
         {
             if (Grounded)
             {
