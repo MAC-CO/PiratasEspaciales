@@ -15,8 +15,8 @@ public class Gun : MonoBehaviour
 
     private void Start()
     {
-        PlayerShoot.shootInput += Shoot;
-        PlayerShoot.reloadInput += StartReloading;
+        Dmov2.shootInput += Shoot;
+        Dmov2.reloadInput += StartReloading;
 
         _gunData.ResetStats();
 
