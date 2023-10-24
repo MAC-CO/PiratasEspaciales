@@ -11,6 +11,8 @@ TagManager:
   - BuffVel
   - BuffSalto
   - Bala
+  - "BuffDa\xF1o"
+  - Regenerar
   layers:
   - Default
   - TransparentFX
@@ -21,6 +23,7 @@ TagManager:
   - personaje
   - 
   - 
+  - asda
   - 
   - 
   - 
@@ -42,8 +45,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Piso
   m_SortingLayers:
   - name: Default
     uniqueID: 0

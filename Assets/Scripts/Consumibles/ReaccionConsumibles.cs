@@ -5,13 +5,17 @@ using UnityEngine;
 public class ReaccionConsumibles : MonoBehaviour
 {
     public StarterAssets.ThirdPersonController movimiento; // Referencia al script de movimiento.
+    public DatosJugador managerVida;
     public float aumentoDeVelocidad = 2.0f; // Aumento de velocidad cuando se consume un objeto.
     public float velocidadOriginalCaminar;
     public float velocidadOriginalCorrer;
     private bool restaurarVelocidad = false;
     public float saltoAumento = 5;
     public float saltoAlturaInicial;
-
+    //public float DañoInicial; 
+    //public float dañoAumento = 30;
+    public float AumentoVida = 20;
+    public float VidaActual;
     
 
     private void Start()
@@ -19,6 +23,8 @@ public class ReaccionConsumibles : MonoBehaviour
         velocidadOriginalCaminar = movimiento.MoveSpeed;
         velocidadOriginalCorrer = movimiento.SprintSpeed;
         saltoAlturaInicial = movimiento.JumpHeight;
+        VidaActual = managerVida.vidaPlayer;
+       // DañoInicial = movimiento.damage;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,21 +42,31 @@ public class ReaccionConsumibles : MonoBehaviour
             // Programa la restauración de la velocidad después de 5 segundos.
             Invoke("RestaurarVelocidad", 5f);
         }
-        if (other.CompareTag("BuffSalto")) {
+        if (other.CompareTag("BuffSalto")) 
+        {
 
              movimiento.JumpHeight = saltoAumento;
              Destroy(other.gameObject);
              Invoke("RestaurarVelocidad", 5f);
         }
         
+      if (other.CompareTag("Regenerar"))
+        {
+            VidaActual += AumentoVida; // Aumenta la vida actual.
+            managerVida.vidaPlayer = (int)VidaActual; // Actualiza la vida del jugador en el script DatosJugador.
+            Debug.Log("Recuperaste 20 de vida pedazo de gobernado");
+            // Actualiza el valor del slider de vida.
+            managerVida.VidaVisual.value = VidaActual;
+        }
     }
 
-    private void RestaurarVelocidad()
+    public void RestaurarVelocidad()
     {
         // En esta parte se restauran los valores del script
         movimiento.MoveSpeed = velocidadOriginalCaminar;
         movimiento.SprintSpeed = velocidadOriginalCorrer;
         movimiento.JumpHeight = saltoAlturaInicial;
+        //movimiento.damage = DañoInicial;
 
     }
 }
