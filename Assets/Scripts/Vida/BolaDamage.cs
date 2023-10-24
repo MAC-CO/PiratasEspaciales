@@ -11,6 +11,7 @@ public class BolaDamage : MonoBehaviour
    {
     if (other.tag=="Player")
       {
+        
         Player .GetComponent<DatosJugador>().vidaPlayer -= damage; 
         Debug.Log("Ocasiono daño al jugador");
       }
