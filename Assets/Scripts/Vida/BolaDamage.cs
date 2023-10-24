@@ -10,13 +10,14 @@ public class BolaDamage : MonoBehaviour
    private void OnTriggerEnter (Collider other)
    {
     if (other.tag=="Player")
-    {
+      {
         Player .GetComponent<DatosJugador>().vidaPlayer -= damage; 
-     }
+        Debug.Log("Ocasiono daño al jugador");
+      }
 
      if (other.tag == "Enemigo")
-     {
+      {
         Debug.Log ("Esto es un enemigo");
-     }
+      }
    }
 }

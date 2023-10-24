@@ -15,9 +15,15 @@ MonoBehaviour:
   name: Pistol
   damage: 76
   maxDistance: 50
-  currentAmmo: 10
-  magSize: 10
-  fireRate: 100
+  currentAmmo: 20
+  magSize: 20
+  fireRate: 1100
   reloadTime: 1.5
   dispersion: {x: 0.1, y: 0.5}
+  speedDispersion: 0.1
+  actualDispersion: 0
+  increaseDispersion: 0.1
+  viewActualDispersion: 0
+  ReloadAnim: {fileID: 0}
+  ShootAnim: {fileID: 0}
   reloading: 0
