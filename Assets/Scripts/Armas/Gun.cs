@@ -75,7 +75,7 @@ public class Gun : MonoBehaviour
                 CallPartes cp = hitInfo.collider.gameObject.GetComponent<CallPartes>();
                 if (cp != null) 
                 {
-                    cp.datos.CausarDaño(_gunData.damage*cp.factor);
+                    cp.datos.CausarDaÃ±o(_gunData.damage*cp.factor);
                 }
             }
 
@@ -94,7 +94,7 @@ public class Gun : MonoBehaviour
 
     private void OnGunShot()
     {
-        
+        Eventos.singleton.PlayEvento("event:/disparo_pistola"); 
     }
 
     private void OnDrawGizmos()
