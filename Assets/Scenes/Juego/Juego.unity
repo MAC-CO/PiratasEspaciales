@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: aeab33f69c199e54794f516d31450ec4, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 697dcc1a69e1a2c4ea5db483875ede85, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -139,6 +139,11 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 474018319699332915, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 601616906015507466, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -148,6 +153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 2147483703
+      objectReference: {fileID: 0}
+    - target: {fileID: 852072243745277450, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1564194643757944097, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
@@ -209,6 +219,11 @@ PrefabInstance:
       propertyPath: m_VolumeLayerMask.m_Bits
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4096727324856833577, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945469839034720564, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -238,6 +253,16 @@ PrefabInstance:
         type: 3}
       propertyPath: GroundLayers.m_Bits
       value: 2147483648
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963930160903474396, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272866270611270438, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7699969843207161643, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
