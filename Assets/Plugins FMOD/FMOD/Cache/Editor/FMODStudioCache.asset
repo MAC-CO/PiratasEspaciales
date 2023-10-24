@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6485489028352117852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/musica_menu
+  m_EditorClassIdentifier: 
+  Path: event:/musica_menu
+  Guid:
+    Data1: 655643400
+    Data2: 1108175333
+    Data3: -988616780
+    Data4: 521617404
+  Banks:
+  - {fileID: 782840680291040607}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 137639
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +39,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: 8765174143221815119}
+  - {fileID: 782840680291040607}
+  EditorEvents:
+  - {fileID: -6485489028352117852}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
+  MasterBanks:
+  - {fileID: 782840680291040607}
+  StringsBanks:
+  - {fileID: 8765174143221815119}
+  cacheTime: 638331392377617444
   cacheVersion: 131608
+--- !u!114 &782840680291040607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD_banks/Desktop/Master.bank
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 638331392377592180
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8765174143221815119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD_banks/Desktop/Master.strings.bank
+  Name: Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638331392377617444
+  FileSizes:
+  - Name: 
+    Value: 760
+  Exists: 1
