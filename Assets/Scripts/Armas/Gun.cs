@@ -44,11 +44,6 @@ public class Gun : MonoBehaviour
     
     private void Shoot()
     {
-        //print("primera ->> " + !_gunData.reloading);
-        //print("segunda ->> " + (timeSinceLastShot > 1f / (_gunData.fireRate / 60f)).ToString());
-        //print(_gunData.currentAmmo);
-        //print(CanShoot());
-
         if (_gunData.currentAmmo > 0 && CanShoot())
         {
             _gunData.RecalcularDisparo();
@@ -59,23 +54,24 @@ public class Gun : MonoBehaviour
             float a = radius * Mathf.Sin(angle);
             float b = radius * Mathf.Cos(angle);
 
-            //Debug.Log(a + " a" + " ------- " + b + " b");
-
             Vector3 offset = new Vector3(a,b,0);
 
             offset = _muzzle.rotation * offset;
             
             flash.Play();
 
-            if (Physics.Raycast(_muzzle.position + offset, _muzzle.forward, out RaycastHit hitInfo, _gunData.maxDistance))
+            if (Physics.Raycast(Camera.main.transform.position + offset, Camera.main.transform.forward, out RaycastHit hitInfo, _gunData.maxDistance))
             {
-                //Debug.Log(hitInfo.transform.name);
+                //Vector3 direction = new Vector3(0,0,0);
 
-                
-                positionImpacto = hitInfo.point;
-                IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();
-                damagable?.Damage(_gunData.damage);
-                
+                Vector3 direction = (hitInfo.point - _muzzle.position).normalized;
+
+                if (Physics.Raycast(_muzzle.position, direction, out RaycastHit Infohit))
+                {
+                    positionImpacto = hitInfo.point;
+                    IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();
+                    damagable?.Damage(_gunData.damage);
+                }
             }
 
             _gunData.currentAmmo--;
