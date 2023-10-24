@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd0bd86552cb7fe48a19bef52fb68dd9, type: 3}
-  m_Name: Sniper Rifle
+  m_Name: Bazooka
   m_EditorClassIdentifier: 
-  name: Sniper Rifle
+  name: Bazooka
   damage: 100
-  maxDistance: 150
-  currentAmmo: 5
-  magSize: 5
-  fireRate: 200
-  reloadTime: 2.5
+  maxDistance: 100
+  currentAmmo: 1
+  magSize: 1
+  fireRate: 6
+  reloadTime: 3
   dispersion: {x: 0.1, y: 0.3}
   speedDispersion: 0.1
   actualDispersion: 0
