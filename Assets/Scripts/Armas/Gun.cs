@@ -89,7 +89,7 @@ public class Gun : MonoBehaviour
 
     private void OnGunShot()
     {
-        
+        Eventos.singleton.PlayEvento("event:/disparo_pistola"); 
     }
 
     private void OnDrawGizmos()
