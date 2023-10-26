@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.ComTypes;
 using System.Collections;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ public class Gun : MonoBehaviour
     [Header("References")]
     [SerializeField] GunData _gunData;
     [SerializeField] Transform _muzzle;
+
+    public CallPartes callparte;
 
     public ParticleSystem flash;
 
@@ -70,7 +73,7 @@ public class Gun : MonoBehaviour
                 {
                     positionImpacto = hitInfo.point;
                     IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();
-                    damagable?.Damage(_gunData.damage);
+                    damagable?.Damage(_gunData.damage*callparte.factor);
                 }
             }
 
