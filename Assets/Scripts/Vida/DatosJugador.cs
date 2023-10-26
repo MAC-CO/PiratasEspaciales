@@ -2,19 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DatosJugador : MonoBehaviour
 {
     public float vidaPlayer;
-    public Slider VidaVisual;
-    private void Start()
+    public TMP_Text TextoVida;
+
+    public void Update()
     {
+        //actualizartexto();
     }
-    public void CausarDaño(float d)
+
+    public void ActualizarTexto()
+    {
+        TextoVida.text = vidaPlayer.ToString();
+    }
+
+    public void CausarDano(float d)
     {
         vidaPlayer -= d;
-        VidaVisual.value = vidaPlayer;
-
+        TextoVida.text = vidaPlayer.ToString();
+        ActualizarTexto();
         if (vidaPlayer <=0 )
         {
             Debug.Log("Death!");
