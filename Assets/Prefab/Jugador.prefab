@@ -3687,10 +3687,10 @@ MonoBehaviour:
   MenuSelecChar:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Menu Selec Char
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: cc407314-d504-4432-aaac-106c72fb8347
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4672,6 +4672,7 @@ GameObject:
   - component: {fileID: 5175002842726997197}
   - component: {fileID: 2505378325791609702}
   - component: {fileID: 9057922789481371846}
+  - component: {fileID: -1080888378869922547}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -4797,6 +4798,19 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &-1080888378869922547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8607305801084223227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &8692954697490274329
 GameObject:
   m_ObjectHideFlags: 0
