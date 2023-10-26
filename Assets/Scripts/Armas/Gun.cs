@@ -7,6 +7,8 @@ public class Gun : MonoBehaviour
     [SerializeField] GunData _gunData;
     [SerializeField] Transform _muzzle;
 
+    public LayerMask CapaDano;
+
     public ParticleSystem flash;
 
     private float timeSinceLastShot;
@@ -66,7 +68,7 @@ public class Gun : MonoBehaviour
 
                 Vector3 direction = (hitInfo.point - _muzzle.position).normalized;
 
-                if (Physics.Raycast(_muzzle.position, direction, out RaycastHit Infohit))
+                if (Physics.Raycast(_muzzle.position, direction, out RaycastHit Infohit,1000,CapaDano))
                 {
                     positionImpacto = hitInfo.point;
                     IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();
