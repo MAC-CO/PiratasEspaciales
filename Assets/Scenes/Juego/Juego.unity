@@ -164,6 +164,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.3609981
       objectReference: {fileID: 0}
+    - target: {fileID: 1893527392617338333, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: TextoVida
+      value: 
+      objectReference: {fileID: 945344610}
+    - target: {fileID: 1893527392617338333, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: VidaVisual
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2827222268692870695, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -264,15 +274,25 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7489466858931456956, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7699969843207161643, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
       propertyPath: m_Name
       value: PlayerController3
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 843113257901398274, guid: d8d1a67ca8d0e944d8fec1381ae20644, type: 3}
-    - {fileID: 601616906015507468, guid: d8d1a67ca8d0e944d8fec1381ae20644, type: 3}
-    m_RemovedGameObjects: []
+    - target: {fileID: 7699969843207161643, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 5261469953600294479, guid: d8d1a67ca8d0e944d8fec1381ae20644, type: 3}
+    - {fileID: 8640680935800682515, guid: d8d1a67ca8d0e944d8fec1381ae20644, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 601616906015507471, guid: d8d1a67ca8d0e944d8fec1381ae20644,
@@ -876,6 +896,18 @@ LightProbeGroup:
   - {x: 7.1518564, y: 2.7763042, z: -11.2319765}
   - {x: 8.993203, y: 2.3566551, z: -8.796325}
   m_Dering: 1
+--- !u!114 &945344610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8274060616384389986, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+    type: 3}
+  m_PrefabInstance: {fileID: 21498795}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1028513131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,6 +1432,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1889105722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1960217190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8258806817729829100, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+    type: 3}
+  m_PrefabInstance: {fileID: 21498795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2012212569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,7 +1590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
-  Player: {fileID: 7699969843207161643, guid: d8d1a67ca8d0e944d8fec1381ae20644, type: 3}
+  Player: {fileID: 1960217190}
 --- !u!135 &2113597803
 SphereCollider:
   m_ObjectHideFlags: 0

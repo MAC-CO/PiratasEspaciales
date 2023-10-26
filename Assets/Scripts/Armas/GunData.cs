@@ -15,11 +15,17 @@ public class GunData : ScriptableObject
     public int magSize;
     public float fireRate;
     public float reloadTime;
+
+    //[HideInInspector] 
+    public bool reloading = false;
+
     public Vector2 dispersion;
     public float speedDispersion;
 
+
     [HideInInspector]
     public float actualDispersion;
+
     //[HideInInspector]
     public float increaseDispersion;
 
@@ -27,12 +33,10 @@ public class GunData : ScriptableObject
     public float viewActualDispersion;
 
 
-    [Header("Animations")]
-    public AnimationClip ReloadAnim;
-    public AnimationClip ShootAnim;
+    //[Header("Animations")]
+    //public AnimationClip ReloadAnim;
+    //public AnimationClip ShootAnim;
     
-    //[HideInInspector] 
-    public bool reloading = false;
 
     public float GetDispersion() //2
     {
@@ -44,7 +48,7 @@ public class GunData : ScriptableObject
         actualDispersion = Mathf.Clamp(actualDispersion + increaseDispersion, dispersion.x, dispersion.y);
     }
 
-    public void ReclacularDispersion()
+    public void RecalcularDispersion()
     {
         actualDispersion = Mathf.Clamp(actualDispersion - increaseDispersion * Time.deltaTime, dispersion.x, dispersion.y);
 
