@@ -8,6 +8,8 @@ public class Gun : MonoBehaviour
     [SerializeField] GunData _gunData;
     [SerializeField] Transform _muzzle;
 
+    public string eventoFMOD; 
+
     public LayerMask CapaDano;
 
     public CallPartes callparte;
@@ -94,7 +96,7 @@ public class Gun : MonoBehaviour
 
     private void OnGunShot()
     {
-        Eventos.singleton.PlayEvento("event:/disparo_pistola"); 
+        Eventos.singleton.PlayEvento("event:/" + eventoFMOD); 
     }
 
     private void OnDrawGizmos()

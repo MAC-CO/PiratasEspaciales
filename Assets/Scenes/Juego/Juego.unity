@@ -224,6 +224,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2952117642390419948, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952117642390419948, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.223
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952117642390419948, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.057
+      objectReference: {fileID: 0}
     - target: {fileID: 3651435451479623156, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
       propertyPath: m_VolumeLayerMask.m_Bits
@@ -288,6 +303,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308893261401990736, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: _gunData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4bc5f34945c5a8b449db650da688846d,
+        type: 2}
+    - target: {fileID: 8308893261401990736, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: eventoFMOD
+      value: disparo_pistola
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
