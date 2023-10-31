@@ -875,6 +875,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gunData: {fileID: 11400000, guid: 6f3b6f38e88c0bf4ba954adc1dc32029, type: 2}
   _muzzle: {fileID: 2020375244}
+  eventoFMOD: disparo_rifle
+  CapaDano:
+    serializedVersion: 2
+    m_Bits: 0
+  callparte: {fileID: 0}
   flash: {fileID: 2020375245}
 --- !u!1 &711556472
 GameObject:
@@ -2814,6 +2819,74 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &1952922394979117599
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 216395557275624382, guid: 480ac342b2ad0384d9438782e074c95b,
+        type: 3}
+      propertyPath: m_Name
+      value: EventosFMOD
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906578626890401947, guid: 480ac342b2ad0384d9438782e074c95b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.26532605
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906578626890401947, guid: 480ac342b2ad0384d9438782e074c95b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2774816
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906578626890401947, guid: 480ac342b2ad0384d9438782e074c95b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.78304523
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906578626890401947, guid: 480ac342b2ad0384d9438782e074c95b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906578626890401947, guid: 480ac342b2ad0384d9438782e074c95b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906578626890401947, guid: 480ac342b2ad0384d9438782e074c95b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906578626890401947, guid: 480ac342b2ad0384d9438782e074c95b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906578626890401947, guid: 480ac342b2ad0384d9438782e074c95b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906578626890401947, guid: 480ac342b2ad0384d9438782e074c95b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906578626890401947, guid: 480ac342b2ad0384d9438782e074c95b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 480ac342b2ad0384d9438782e074c95b, type: 3}
 --- !u!4 &1969078469644069449
 Transform:
   m_ObjectHideFlags: 0
@@ -4645,9 +4718,23 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 5421895666766052432, guid: 4419d82f33d36e848b3ed5af4c8da37e,
       type: 3}
+  MenuSelecChar:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Menu Selec Char
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6dafcd5c-dd84-4f2b-8221-1a3e9bcc8513
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   Disparo: 0
   Apuntado: 0
   Recarga: 0
+  MenuC: 0
+  Menu1: {fileID: 0}
   estaAgachado: 0
 --- !u!114 &6982812147933622149
 MonoBehaviour:
@@ -5580,3 +5667,4 @@ SceneRoots:
   - {fileID: 2012212573}
   - {fileID: 1429070021}
   - {fileID: 910800927}
+  - {fileID: 1952922394979117599}
