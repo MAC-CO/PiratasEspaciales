@@ -38,12 +38,12 @@ public class GunData : ScriptableObject
     //public AnimationClip ShootAnim;
     
 
-    public float GetDispersion() //2
+    public float GetDispersion()
     {
         return actualDispersion;
     }
 
-    public void RecalcularDisparo()  //1
+    public void RecalcularDisparo()
     {
         actualDispersion = Mathf.Clamp(actualDispersion + increaseDispersion, dispersion.x, dispersion.y);
     }

@@ -6,6 +6,8 @@ public class ReaccionConsumibles : MonoBehaviour
 {
     public StarterAssets.ThirdPersonController movimiento; // Referencia al script de movimiento.
     public DatosJugador managerVida;
+
+    
     public float aumentoDeVelocidad = 2.0f; // Aumento de velocidad cuando se consume un objeto.
     public float velocidadOriginalCaminar;
     public float velocidadOriginalCorrer;
@@ -56,7 +58,7 @@ public class ReaccionConsumibles : MonoBehaviour
             managerVida.vidaPlayer = (int)VidaActual; // Actualiza la vida del jugador en el script DatosJugador.
             Debug.Log("Recuperaste 20 de vida pedazo de gobernado");
             // Actualiza el valor del slider de vida.
-            managerVida.VidaVisual.value = VidaActual;
+            managerVida.TextoVida.text = VidaActual.ToString();
         }
     }
 
