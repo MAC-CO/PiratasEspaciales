@@ -1,31 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public string nombre;
-    public Score score;
+    private ScoreData sd;
+    void Awake ()
+    {
+        var json = PlayerPrefs.GetString("scores", "{}");
+        sd = JsonUtility.FromJson<ScoreData>(json);
+    }
 
-
-  
     void Start()
     {
-        score = new Score(nombre, 0, 0);
-        ScoreData.instance.AddScore(score);
+        ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
+
+        if (scoreManager != null)
+        {
+            Score score = new Score("Jugador1", 100);
+            scoreManager.AddScore(score);
+        }
     }
 
-    [ContextMenu("Sumar score")]
-   public void SumarScore()
+    public IEnumerable<Score> GetHighScores()
     {
-        score.score++;
-        ScoreData.instance.UpdateScore(score);
+        return sd.scores.ToArray().OrderByDescending(x => x.score);
     }
 
-    [ContextMenu("Sumar Kills")]
-    public void SumarKills()
+
+    public void AddScore(Score score)
     {
-        score.kills++;
-        ScoreData.instance.UpdateScore(score);
+        sd.scores.Add(score);
+    }
+
+    private void OnDestroy()
+    {
+        SaveScore();
+    }
+
+    public void SaveScore()
+    {
+        var json = JsonUtility.ToJson(sd);
+        PlayerPrefs.SetString("scores", json);
     }
 }
