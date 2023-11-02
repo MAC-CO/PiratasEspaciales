@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.ComTypes;
 using System.Collections;
 using UnityEngine;
 
@@ -7,7 +8,11 @@ public class Gun : MonoBehaviour
     [SerializeField] GunData _gunData;
     [SerializeField] Transform _muzzle;
 
+    public string eventoFMOD; 
+
     public LayerMask CapaDano;
+
+    public CallPartes callparte;
 
     public ParticleSystem flash;
 
@@ -72,7 +77,7 @@ public class Gun : MonoBehaviour
                 {
                     positionImpacto = hitInfo.point;
                     IDamagable damagable = hitInfo.transform.GetComponent<IDamagable>();
-                    damagable?.Damage(_gunData.damage);
+                    damagable?.Damage(_gunData.damage*callparte.factor);
                 }
             }
 
@@ -91,7 +96,7 @@ public class Gun : MonoBehaviour
 
     private void OnGunShot()
     {
-        Eventos.singleton.PlayEvento("event:/disparo_pistola"); 
+        Eventos.singleton.PlayEvento("event:/" + eventoFMOD); 
     }
 
     private void OnDrawGizmos()
