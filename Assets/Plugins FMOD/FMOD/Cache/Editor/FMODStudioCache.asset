@@ -27,33 +27,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6849408180854664725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/musica_batalla
-  m_EditorClassIdentifier: 
-  Path: event:/musica_batalla
-  Guid:
-    Data1: -220369633
-    Data2: 1246853551
-    Data3: 1274986404
-    Data4: 274210581
-  Banks:
-  - {fileID: 782840680291040607}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-6766703569279690425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +53,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1750
+  Length: 0
 --- !u!114 &-6485489028352117852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,8 +77,7 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters:
-  - {fileID: 1549847992364404936}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 137639
@@ -135,7 +107,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1280
+  Length: 1802
 --- !u!114 &-4078129651498154660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +134,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1750
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,14 +157,12 @@ MonoBehaviour:
   - {fileID: -8424435264117752021}
   - {fileID: -6766703569279690425}
   - {fileID: -4078129651498154660}
-  - {fileID: -6849408180854664725}
-  - {fileID: 1576062318926670495}
   EditorParameters: []
   MasterBanks:
   - {fileID: 782840680291040607}
   StringsBanks:
   - {fileID: 8765174143221815119}
-  cacheTime: 638349522550250084
+  cacheTime: 638349526105979225
   cacheVersion: 131608
 --- !u!114 &782840680291040607
 MonoBehaviour:
@@ -209,60 +179,9 @@ MonoBehaviour:
   Path: Assets/FMOD_banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638349522550219306
+  lastModified: 638349526105979225
   FileSizes: []
   Exists: 1
---- !u!114 &1549847992364404936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/musica_menu/volumen
-  m_EditorClassIdentifier: 
-  Name: volumen
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2512687019
-    data2: 2250519591
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &1576062318926670495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/disparo_escopeta
-  m_EditorClassIdentifier: 
-  Path: event:/disparo_escopeta
-  Guid:
-    Data1: 1851880168
-    Data2: 1123990272
-    Data3: 1614609854
-    Data4: 2142004789
-  Banks:
-  - {fileID: 782840680291040607}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1259
 --- !u!114 &8765174143221815119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,10 +197,10 @@ MonoBehaviour:
   Path: Assets/FMOD_banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638349522550250084
+  lastModified: 638349526104355973
   FileSizes:
   - Name: 
-    Value: 1124
+    Value: 994
   Exists: 1
 --- !u!114 &9111654864830815745
 MonoBehaviour:
@@ -309,4 +228,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 940
+  Length: 2063
