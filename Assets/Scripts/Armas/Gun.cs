@@ -27,7 +27,10 @@ public class Gun : MonoBehaviour
 
         _gunData.ResetStats();
 
-        _gunData.currentAmmo = _gunData.magSize;
+        if(DispersionUI.Instance != null)
+        {
+            DispersionUI.Instance.gunData = _gunData;
+        }
     }
 
     public void StartReloading()
@@ -53,8 +56,6 @@ public class Gun : MonoBehaviour
     {
         if (_gunData.currentAmmo > 0 && CanShoot())
         {
-            _gunData.RecalcularDisparo();
-
             float angle = Random.Range(0, 2 * Mathf.PI);
             float radius = Random.Range(0, _gunData.GetDispersion());
 
@@ -69,8 +70,6 @@ public class Gun : MonoBehaviour
 
             if (Physics.Raycast(Camera.main.transform.position + offset, Camera.main.transform.forward, out RaycastHit hitInfo, _gunData.maxDistance))
             {
-                //Vector3 direction = new Vector3(0,0,0);
-
                 Vector3 direction = (hitInfo.point - _muzzle.position).normalized;
 
                 if (Physics.Raycast(_muzzle.position, direction, out RaycastHit Infohit,1000,CapaDano))
@@ -82,6 +81,7 @@ public class Gun : MonoBehaviour
             }
 
             _gunData.currentAmmo--;
+            _gunData.RecalcularDisparo();
             timeSinceLastShot = 0;
             OnGunShot();
         }
@@ -91,7 +91,7 @@ public class Gun : MonoBehaviour
     {
         timeSinceLastShot += Time.deltaTime;
         _gunData.RecalcularDispersion();
-        Debug.DrawRay(_muzzle.position, _muzzle.forward * _gunData.maxDistance);
+        //Debug.DrawRay(_muzzle.position, _muzzle.forward * _gunData.maxDistance);
     }
 
     private void OnGunShot()

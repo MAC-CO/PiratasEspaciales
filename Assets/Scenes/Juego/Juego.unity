@@ -154,6 +154,11 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 2147483703
       objectReference: {fileID: 0}
+    - target: {fileID: 601616906015507471, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 852072243745277450, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -265,6 +270,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6774812828402431135, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6815684660518727881, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
       propertyPath: GroundLayers.m_Bits
@@ -292,13 +302,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7699969843207161643, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7699969843207161643, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8308893261401990736, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
+      propertyPath: _gunData
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f3b6f38e88c0bf4ba954adc1dc32029,
+        type: 2}
+    - target: {fileID: 8308893261401990736, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
       propertyPath: eventoFMOD
       value: disparo_rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308893261401990736, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      propertyPath: CapaDano.m_Bits
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8995196202096213168, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
@@ -385,7 +411,11 @@ PrefabInstance:
     - {fileID: 5261469953600294479, guid: d8d1a67ca8d0e944d8fec1381ae20644, type: 3}
     - {fileID: 8640680935800682515, guid: d8d1a67ca8d0e944d8fec1381ae20644, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1772188436184384583, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 873062470}
   m_SourcePrefab: {fileID: 100100000, guid: d8d1a67ca8d0e944d8fec1381ae20644, type: 3}
 --- !u!1001 &303074008
 PrefabInstance:
@@ -540,6 +570,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6623280275369185928, guid: 5ffe3f47c1929ce4ebb1622b55cbc6fb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6919462257906292156, guid: 5ffe3f47c1929ce4ebb1622b55cbc6fb,
         type: 3}
       propertyPath: m_Layer
@@ -668,6 +703,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!1 &873062468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1772188436184384583, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+    type: 3}
+  m_PrefabInstance: {fileID: 21498795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &873062470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873062468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0655080e8d622c64d95ed7e99300f69b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tamanoDispersion: {x: 20, y: 200}
+  gunData: {fileID: 0}
 --- !u!1 &874605735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1563,7 @@ GameObject:
   - component: {fileID: 2012212571}
   - component: {fileID: 2012212570}
   - component: {fileID: 2012212574}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
