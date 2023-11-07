@@ -297,6 +297,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8308893261401990736, guid: d8d1a67ca8d0e944d8fec1381ae20644,
         type: 3}
+      propertyPath: _gunData
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f3b6f38e88c0bf4ba954adc1dc32029,
+        type: 2}
+    - target: {fileID: 8308893261401990736, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
       propertyPath: eventoFMOD
       value: disparo_rifle
       objectReference: {fileID: 0}
@@ -385,7 +391,11 @@ PrefabInstance:
     - {fileID: 5261469953600294479, guid: d8d1a67ca8d0e944d8fec1381ae20644, type: 3}
     - {fileID: 8640680935800682515, guid: d8d1a67ca8d0e944d8fec1381ae20644, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 601616906015507471, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1975939748}
   m_SourcePrefab: {fileID: 100100000, guid: d8d1a67ca8d0e944d8fec1381ae20644, type: 3}
 --- !u!1001 &303074008
 PrefabInstance:
@@ -1495,6 +1505,43 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 21498795}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1975939742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 601616906015507471, guid: d8d1a67ca8d0e944d8fec1381ae20644,
+    type: 3}
+  m_PrefabInstance: {fileID: 21498795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1975939748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975939742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 655643400
+      Data2: 1108175333
+      Data3: -988616780
+      Data4: 521617404
+    Path: event:/musica_menu
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2012212569
 GameObject:
   m_ObjectHideFlags: 0
