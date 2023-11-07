@@ -22,6 +22,6 @@ MonoBehaviour:
   reloading: 0
   dispersion: {x: 0.1, y: 0.5}
   speedDispersion: 0.1
-  actualDispersion: 0
+  actualDispersion: 0.01
   increaseDispersion: 0.1
   viewActualDispersion: 0

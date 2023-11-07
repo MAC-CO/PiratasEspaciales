@@ -443,6 +443,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gunData: {fileID: 11400000, guid: 6f3b6f38e88c0bf4ba954adc1dc32029, type: 2}
   _muzzle: {fileID: 1176376877}
+  eventoFMOD: 
+  CapaDano:
+    serializedVersion: 2
+    m_Bits: 0
+  callparte: {fileID: 0}
   flash: {fileID: 1176376879}
 --- !u!65 &465543054
 BoxCollider:
@@ -782,23 +787,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2276640878285949560, guid: 79d163e831ef58d4e8261d9cf0b1d611,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2276640878285949560, guid: 79d163e831ef58d4e8261d9cf0b1d611,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2276640878285949560, guid: 79d163e831ef58d4e8261d9cf0b1d611,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2276640878285949560, guid: 79d163e831ef58d4e8261d9cf0b1d611,
-        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2276640878285949560, guid: 79d163e831ef58d4e8261d9cf0b1d611,
         type: 3}
@@ -844,16 +834,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2276640878285949560, guid: 79d163e831ef58d4e8261d9cf0b1d611,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2430316516710347899, guid: 79d163e831ef58d4e8261d9cf0b1d611,
-        type: 3}
-      propertyPath: m_RenderAlignment
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5530142669350536641, guid: 79d163e831ef58d4e8261d9cf0b1d611,
         type: 3}
