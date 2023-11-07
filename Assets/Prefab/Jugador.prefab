@@ -866,6 +866,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gunData: {fileID: 11400000, guid: 6f3b6f38e88c0bf4ba954adc1dc32029, type: 2}
   _muzzle: {fileID: 3684399585691343365}
+  eventoFMOD: 
+  CapaDano:
+    serializedVersion: 2
+    m_Bits: 0
+  callparte: {fileID: 0}
   flash: {fileID: 1727088106313481749}
 --- !u!1 &2265721488170716610
 GameObject:
@@ -3493,6 +3498,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2203898978095534000}
   - component: {fileID: 1273412793454079391}
+  - component: {fileID: 5427137116002562617}
+  - component: {fileID: 3715260363508238749}
   - component: {fileID: 7418268048927370909}
   - component: {fileID: 5890309334346625756}
   - component: {fileID: 5965228440774642053}
@@ -3549,6 +3556,45 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5427137116002562617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623280275369185928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &3715260363508238749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623280275369185928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 5427137116002562617}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!114 &7418268048927370909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3951,7 +3997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaPlayer: 100
-  VidaVisual: {fileID: 0}
+  TextoVida: {fileID: 0}
 --- !u!1 &6733396070915428842
 GameObject:
   m_ObjectHideFlags: 0
