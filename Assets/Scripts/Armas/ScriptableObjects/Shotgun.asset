@@ -19,11 +19,9 @@ MonoBehaviour:
   magSize: 8
   fireRate: 300
   reloadTime: 2
+  reloading: 0
   dispersion: {x: 0.1, y: 0.5}
   speedDispersion: 0.1
   actualDispersion: 0
   increaseDispersion: 0.1
   viewActualDispersion: 0
-  ReloadAnim: {fileID: 0}
-  ShootAnim: {fileID: 0}
-  reloading: 0
