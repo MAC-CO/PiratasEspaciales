@@ -1,3 +1,4 @@
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Gun", menuName = "Weapon/Gun")]
@@ -23,7 +24,7 @@ public class GunData : ScriptableObject
     public float speedDispersion;
 
 
-    [HideInInspector]
+    //[HideInInspector]
     public float actualDispersion;
 
     //[HideInInspector]
@@ -46,6 +47,7 @@ public class GunData : ScriptableObject
     public void RecalcularDisparo()
     {
         actualDispersion = Mathf.Clamp(actualDispersion + increaseDispersion, dispersion.x, dispersion.y);
+        Debug.LogError("recalculado");
     }
 
     public void RecalcularDispersion()
@@ -59,5 +61,6 @@ public class GunData : ScriptableObject
     {
         actualDispersion = 0;
         currentAmmo = magSize;
+        reloading = false;
     }
 }
