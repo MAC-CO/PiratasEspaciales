@@ -1,87 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8424435264117752021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/musica_batalla_1
-  m_EditorClassIdentifier: 
-  Path: event:/musica_batalla_1
-  Guid:
-    Data1: 670593126
-    Data2: 1271362424
-    Data3: -1440374603
-    Data4: 1750318144
-  Banks:
-  - {fileID: 782840680291040607}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6766703569279690425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/disparo_bazooka
-  m_EditorClassIdentifier: 
-  Path: event:/disparo_bazooka
-  Guid:
-    Data1: -1361578646
-    Data2: 1201775678
-    Data3: -1406330191
-    Data4: 1178888031
-  Banks:
-  - {fileID: 782840680291040607}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6485489028352117852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/musica_menu
-  m_EditorClassIdentifier: 
-  Path: event:/musica_menu
-  Guid:
-    Data1: 655643400
-    Data2: 1108175333
-    Data3: -988616780
-    Data4: 521617404
-  Banks:
-  - {fileID: 782840680291040607}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 137639
---- !u!114 &-5356985593942849114
+--- !u!114 &-7205514055071514830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,7 +19,7 @@ MonoBehaviour:
     Data3: 1349107903
     Data4: 1884682086
   Banks:
-  - {fileID: 782840680291040607}
+  - {fileID: -6586847753267583618}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -108,7 +27,25 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1802
---- !u!114 &-4078129651498154660
+--- !u!114 &-6586847753267583618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD_banks/Desktop/Master.bank
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 638349484596363163
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2752699980661913643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,7 +64,7 @@ MonoBehaviour:
     Data3: -458041966
     Data4: -2025423716
   Banks:
-  - {fileID: 782840680291040607}
+  - {fileID: -6586847753267583618}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -135,6 +72,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-353319588644075116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/disparo_rifle
+  m_EditorClassIdentifier: 
+  Path: event:/disparo_rifle
+  Guid:
+    Data1: 1003925802
+    Data2: 1100111482
+    Data3: -1105259104
+    Data4: 1423473579
+  Banks:
+  - {fileID: -6586847753267583618}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2063
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,23 +112,23 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 8765174143221815119}
-  - {fileID: 782840680291040607}
+  - {fileID: 4949573925706938702}
+  - {fileID: -6586847753267583618}
   EditorEvents:
-  - {fileID: -6485489028352117852}
-  - {fileID: 9111654864830815745}
-  - {fileID: -5356985593942849114}
-  - {fileID: -8424435264117752021}
-  - {fileID: -6766703569279690425}
-  - {fileID: -4078129651498154660}
+  - {fileID: 8773948807799055018}
+  - {fileID: -353319588644075116}
+  - {fileID: -7205514055071514830}
+  - {fileID: 3486384302129494143}
+  - {fileID: 3333095362862232465}
+  - {fileID: -2752699980661913643}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 782840680291040607}
+  - {fileID: -6586847753267583618}
   StringsBanks:
-  - {fileID: 8765174143221815119}
+  - {fileID: 4949573925706938702}
   cacheTime: 638349484596363163
   cacheVersion: 131608
---- !u!114 &782840680291040607
+--- !u!114 &3333095362862232465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,16 +137,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/Master.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/disparo_bazooka
   m_EditorClassIdentifier: 
-  Path: Assets/FMOD_banks/Desktop/Master.bank
-  Name: Desktop/Master
-  StudioPath: bank:/Master
-  lastModified: 638349484596363163
-  FileSizes: []
-  Exists: 1
---- !u!114 &8765174143221815119
+  Path: event:/disparo_bazooka
+  Guid:
+    Data1: -1361578646
+    Data2: 1201775678
+    Data3: -1406330191
+    Data4: 1178888031
+  Banks:
+  - {fileID: -6586847753267583618}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3486384302129494143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/musica_batalla_1
+  m_EditorClassIdentifier: 
+  Path: event:/musica_batalla_1
+  Guid:
+    Data1: 670593126
+    Data2: 1271362424
+    Data3: -1440374603
+    Data4: 1750318144
+  Banks:
+  - {fileID: -6586847753267583618}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4949573925706938702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +202,7 @@ MonoBehaviour:
   - Name: 
     Value: 994
   Exists: 1
---- !u!114 &9111654864830815745
+--- !u!114 &8773948807799055018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,20 +212,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/disparo_rifle
+  m_Name: event:/musica_menu
   m_EditorClassIdentifier: 
-  Path: event:/disparo_rifle
+  Path: event:/musica_menu
   Guid:
-    Data1: 1003925802
-    Data2: 1100111482
-    Data3: -1105259104
-    Data4: 1423473579
+    Data1: 655643400
+    Data2: 1108175333
+    Data3: -988616780
+    Data4: 521617404
   Banks:
-  - {fileID: 782840680291040607}
-  IsStream: 0
+  - {fileID: -6586847753267583618}
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2063
+  Length: 137639
